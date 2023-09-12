@@ -1,0 +1,38 @@
+[package]
+name = "rust_axum"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"]}
+
+#Axum
+axum = "0.6.16"
+
+#serde (Serialize, Deserialize)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "3.2.0"
+
+#Middleware
+tower-http = { version = "0.4", features = ["fs"]}
+
+#Cookies
+tower-cookies = "0.9"
+
+#Stuff
+lazy-regex = "3.0.1"
+#AsyncTrait is not yet supported by default
+async-trait = "0.1.72"
+#Serialize Enum-values
+strum_macros = "0.25.1"
+#uuid
+uuid = { version = "1", features = ["v4", "fast-rng"]}
+
+
+
+[dev-dependencies]
+anyhow = "1"
+httpc-test = "0.1.1"
